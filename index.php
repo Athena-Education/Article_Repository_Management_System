@@ -109,7 +109,7 @@
             format("svg");
       }
     </style>
-    
+
     <link
       rel="stylesheet"
       type="text/css"
@@ -285,7 +285,8 @@
           </div>
         </div>
       </div>
-    <div id="secondary-navigation-template" style="display: none">
+
+      <div id="secondary-navigation-template" style="display: none">
         <ul class="m-secondary-menu">
           <li class="nav-data-privacy">
             <a href="privacy/index.php">Data &amp; privacy</a>
@@ -514,7 +515,7 @@
     <script defer src="assets/js/vendorb222.js?v=214a6e5c0e"></script>
     <script defer src="assets/js/appb222.js?v=214a6e5c0e"></script>
     <script defer src="assets/js/homeb222.js?v=214a6e5c0e"></script>
-  
+
   </body>
 </html>
 <script>
@@ -547,5 +548,3 @@ $(document).ready(function(){
  });
 });
 </script>
-  
-    
