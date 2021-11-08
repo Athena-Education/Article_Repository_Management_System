@@ -259,7 +259,6 @@ function getFinalPost($con){
     }
 
     return $data; 
-
 }
 
 function getRandomPost($con, $id){
