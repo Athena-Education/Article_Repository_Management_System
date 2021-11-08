@@ -34,3 +34,78 @@
       href="assets/js/vendor/content-api.minb222.js?v=214a6e5c0e"
       as="script"
     />
+    <link
+      rel="preload"
+      href="assets/js/vendorb222.js?v=214a6e5c0e"
+      as="script"
+    />
+    <link rel="preload" href="assets/js/appb222.js?v=214a6e5c0e" as="script" />
+    <link rel="preconnect" href="https://polyfill.io/" />
+    <link rel="dns-prefetch" href="https://polyfill.io/" />
+    <link
+      rel="preload"
+      href="assets/css/homeb222.css?v=214a6e5c0e"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="assets/css/listingb222.css?v=214a6e5c0e"
+      as="style"
+    />
+    <link rel="preload" href="assets/js/homeb222.js?v=214a6e5c0e" as="script" />
+    <style>
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local("Source Sans Pro Regular"), local("SourceSansPro-Regular"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-regularb222.woff2?v=214a6e5c0e")
+            format("woff2"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-regularb222.woff?v=214a6e5c0e")
+            format("woff");
+      }
+
+      /* source-sans-pro-600 */
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: local("Source Sans Pro SemiBold"), local("SourceSansPro-SemiBold"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-600b222.woff2?v=214a6e5c0e")
+            format("woff2"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-600b222.woff?v=214a6e5c0e")
+            format("woff");
+      }
+
+      /* source-sans-pro-700 */
+      @font-face {
+        font-family: "Source Sans Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local("Source Sans Pro Bold"), local("SourceSansPro-Bold"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-700b222.woff2?v=214a6e5c0e")
+            format("woff2"),
+          url("assets/fonts/source-sans-pro/latin/source-sans-pro-700b222.woff?v=214a6e5c0e")
+            format("woff");
+      }
+
+      /* iconmoon */
+      @font-face {
+        font-family: "icomoon";
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+        src: url("assets/fonts/icomoon/icomoon7f84.eot?101fc3?v=214a6e5c0e");
+        src: url("assets/fonts/icomoon/icomoon2c17.eot?101fc3#iefix?v=214a6e5c0e")
+            format("embedded-opentype"),
+          url("assets/fonts/icomoon/icomoon7f84.ttf?101fc3?v=214a6e5c0e")
+            format("truetype"),
+          url("assets/fonts/icomoon/icomoon7f84.woff?101fc3?v=214a6e5c0e")
+            format("woff"),
+          url("assets/fonts/icomoon/icomoon2c17.svg?101fc3#icomoon?v=214a6e5c0e")
+            format("svg");
+      }
+    </style>
