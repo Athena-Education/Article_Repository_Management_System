@@ -109,3 +109,180 @@
             format("svg");
       }
     </style>
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/appb222.css?v=214a6e5c0e"
+      media="screen"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/homeb222.css?v=214a6e5c0e"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/listingb222.css?v=214a6e5c0e"
+      media="screen"
+    />
+  </head>
+  <body class="home-template">
+    <header class="m-header js-header">
+      <div class="m-mobile-topbar" data-aos="fade-down">
+        <button
+          class="m-icon-button in-mobile-topbar js-open-menu"
+          aria-label="Open menu"
+        >
+          <span class="icon-menu" aria-hidden="true"></span>
+        </button>
+        <a href="index.php" class="m-site-name in-mobile-topbar">
+          Athena
+        </a>
+      </div>
+
+      <div class="m-menu js-menu">
+        <button
+          class="m-icon-button outlined as-close-menu js-close-menu"
+          aria-label="Close menu"
+        >
+          <span class="icon-close"></span>
+        </button>
+        <div class="m-menu__main" data-aos="fade-down">
+          <div class="l-wrapper">
+            <div class="m-nav js-main-nav">
+              <nav
+                class="m-nav__left js-main-nav-left"
+                role="navigation"
+                aria-label="Main menu"
+              >
+                <ul>
+                  <li class="only-desktop">
+                    <a href="index.php" class="m-site-name in-desktop-menu">
+                      Athena
+                    </a>
+                  </li>
+
+                  <li class="nav-home nav-current">
+                    <a href="index.php">Blog</a>
+                  </li>
+                  <li class="nav-about">
+                    <a href="about/index.php">Know Us !</a>
+                  </li>
+
+                  <li class="more">
+                    <span>
+                      <a
+                        href="javascript:void(0);"
+                        class="js-open-secondary-menu"
+                      >
+                        Dive more
+                        <span
+                          class="icon-chevron-down"
+                          aria-hidden="true"
+                        ></span>
+                      </a>
+                    </span>
+                  </li>
+                  <li class="submenu-option js-submenu-option">
+                    <button
+                      class="m-icon-button in-menu-main more js-toggle-submenu"
+                      aria-label="Open submenu"
+                    >
+                      <span class="icon-more" aria-hidden="true"></span>
+                    </button>
+                    <div class="m-submenu js-submenu">
+                      <div class="l-wrapper in-submenu">
+                        <section class="m-recent-articles">
+                          <h3 class="m-submenu-title in-recent-articles">
+                            Recent Blogs
+                          </h3>
+                          <div class="glide js-recent-slider">
+                            <div class="glide__track" data-glide-el="track">
+                              <div class="glide__slides">
+                            <?php foreach(array_slice($posts, 0, 3) as $recent ){ ?>
+                                <div class="glide__slide">
+                                  <a
+                                    href="post.php?post_link=<?=$recent['id']?>"
+                                    class="m-recent-article"
+                                  >
+                                    <div class="m-recent-article__picture">
+                                      <img
+                                        src="<?=$recent['header']?>"
+                                        loading="lazy"
+                                        alt=""
+                                        onerror=this.src="../account/img/default.png"
+                                      />
+                                    </div>
+                                    <h3
+                                      class="
+                                        m-recent-article__title
+                                        js-recent-article-title
+                                      "
+                                      title="<?=$recent['title']?>"
+                                    >
+                                      <?=$recent['title']?>
+                                    </h3>
+                                    <span class="m-recent-article__date"
+                                      ><?=TimePost($recent['created_at'])?></span
+                                    >
+                                  </a>
+                                </div>
+                                <?php } ?>
+                               
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <section class="m-tags">
+                          <h3 class="m-submenu-title">Tags</h3>
+                          <ul>
+                          <?php $categories = getAllCategory($con); 
+                          foreach($categories as $category){
+                          ?>
+                            <li>
+                              <a href="tag/posts.php?category_id=<?=$category['id']?>"><?=$category['name']?></a>
+                            </li>
+                          <?php } ?>
+                          </ul>
+                        </section>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <!--
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" placeholder="Search" />
+  </div>
+  <button type="button" class="btn btn-primary" style="background: #FF0000; color: #fff; border: none; margin: 10px;">
+    <i class="fa fa-search"></i>
+  </button>-->
+  
+                <div
+                  class="m-toggle-darkmode js-tooltip"
+                  data-tippy-content="Toggle mode"
+                  tabindex="0"
+                >
+                  <label for="toggle-darkmode" class="sr-only">
+                    Toggle mode
+                  </label>
+                  <input
+                    id="toggle-darkmode"
+                    type="checkbox"
+                    class="js-toggle-darkmode"
+                  />
+                  <div>
+                    <span class="icon-moon moon" aria-hidden="true"></span>
+                    <span class="icon-sunny sun" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
