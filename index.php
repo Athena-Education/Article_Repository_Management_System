@@ -285,4 +285,234 @@
           </div>
         </div>
       </div>
+    <div id="secondary-navigation-template" style="display: none">
+        <ul class="m-secondary-menu">
+          <li class="nav-data-privacy">
+            <a href="privacy/index.php">Data &amp; privacy</a>
+          </li>
+          <li class="nav-contact">
+            <a href="contact/index.php">Contact</a>
+          </li>
+          <li class="nav-contact">
+            <a href="account/login.php">Contribute / Login</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main-wrap">
+      <section class="m-hero no-picture" data-aos="fade" style="background: rgba(0, 0, 0,0.7); background-image: url('https://arms-cse3001.42web.io/assets/images/intro.gif'); background-blend-mode: overlay;  background-size: cover;">
+        <div
+          data-aos="fade-down"
+          style="width: auto; max-width: 330px; align: left; left: -200px"
+        >
+          <img
+            src="../account/img/logo.png"
+            style="
+              margin: 5px;
+              border-radius: 100%;
+              width: 200px;
+              display: block;
+            "
+          />
+          <br />
+        </div>
+        <div class="m-hero__content" data-aos="fade-down" style="width: 70%;">
+          <style>
+            @font-face {
+              font-family: Orion;
+              src: url(font/Orion.otf);
+            }
+          </style>
+          <h1 class="m-hero-title bigger" style="font-family: Orion; color:#B4B4B4;">
+            Athena
+          </h1>
+          <div class="m-hero-description bigger" style="color:#B4B4B4;">
+            You can find blogs related to
+            <span
+              style="font-weight: bolder; color: #88ff00"
+              class="typing"
+            ></span>
+          </div>
+          <script>
+            $(document).ready(function () {
+              var typed = new Typed(".typing", {
+                strings: [
+                  "Web Development",
+                  "App Development",
+                  "AI",
+                  "IoT",
+                  "Sensors",
+                  "Robocon",
+                  "Blockchain",
+                  "Machine Learning",
+                  "Crytpo",
+                  "Deep Learning",
+                  "Digital Forensics"
+                ],
+                typeSpeed: 110,
+                backSpeed: 60,
+                loop: true,
+              });
+            });
+          </script>
+          <a href="newsletter/index.php" class="m-button filled"
+            >Stay Updated !</a
+          >
+        </div>
+      </section>
+      <div class="l-content">
+        <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+         <div class="form-group" style="margin-left: 80%;">
+    <div class="input-group">
+     <input type="text" style="margin: 10px; padding: 10px; padding-left: 20px; border: solid; border-radius: 30px;" name="search_text" id="search_text" placeholder="Search" class="form-control" />
+    </div>
+   </div>
+   <br />
+   <div id="result" class="l-grid centered"></div>
+   <hr style="border: solid; margin-bottom: 50px; margin-top: 10px; border-width: 1.5px;">
+          <div class="l-grid centered">
+           
+<?php         
+          foreach($posts as $post){
+              $inform = AuthorInformation($con, $post['username']);
+              foreach($inform as $info){
+            ?>
+           <article class="m-article-card post">
+              <div class="m-article-card__picture">
+                <a
+                  href="post.php?post_link=<?=$post['id']?>"
+                  class="m-article-card__picture-link"
+                  aria-hidden="true"
+                  tabindex="-1"
+                ></a>
+                <img
+                  class="m-article-card__picture-background"
+                  src="<?=$post['header']?>"
+                  loading="lazy"
+                  alt=""
+                  onerror=this.src="../account/img/default.png"
+                />
+                <a
+                  href="author/profile.php?encryption_id=<?=$info['username']?>"
+                  class="m-article-card__author js-tooltip"
+                  aria-label="<?=$info['author']?>"
+                  data-tippy-content="Posted by <?=$info['author']?>"
+                >
+                  <div
+                    style="background-image: url(<?=$info['photo']?>);"
+                  ></div>
+                </a>
+              </div>
+              <div class="m-article-card__info">
+                <a href="tag/posts.php?category_id=<?=$post['category_id']?>" class="m-article-card__tag"
+                  ><?=getCategory($con,$post['category_id'])?></a
+                >
+                <a
+                  href="post.php?post_link=<?=$post['id']?>"
+                  class="m-article-card__info-link"
+                  aria-label="<?=$post['title']?>"
+                >
+                  <div>
+                    <h2
+                      class="m-article-card__title js-article-card-title"
+                      title="<?=$post['title']?>"
+                    >
+                      <?php echo $post['title']; ?>
+                    </h2>
+                  </div>
+                  <div class="m-article-card__timestamp">
+                    <span><?=TimePost($post['created_at'])?></span>
+                    <span>&bull;</span>
+                    <span><?=ReadTime($post['content'])?></span>
+                  </div>
+                </a>
+              </div>
+            </article>
+            <?php
+            $count++;
+          }
+          }
+          ?>
+          </div>
+        </div>
+
+        <div class="l-wrapper">
+          <nav class="m-pagination" aria-label="Pagination">
+            <span class="m-pagination__text">Page 1 of 1</span>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="m-footer">
+      <div class="m-footer__content">
+        <nav
+          class="m-footer__nav-secondary"
+          role="navigation"
+          aria-label="Secondary menu in footer"
+        >
+          <ul class="m-secondary-menu">
+            <li class="nav-data-privacy">
+              <a href="privacy/index.php">Data &amp; privacy</a>
+            </li>
+            <li class="nav-contact">
+              <a href="contact/index.php">Contact</a>
+            </li>
+     <li class="nav-contact">
+        <a href="https://arms-cse3001.42web.io/account/login.php">Contribute / Login</a>
+      </li>
+          </ul>
+        </nav>
+        <nav class="m-footer-social">
+          <a
+            href="https://twitter.com/technocratsr"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+          >
+            <span class="icon-twitter" aria-hidden="true"></span>
+          </a>
+          <a href="https://github.com/technocrats-robotics" aria-label="GitHub">
+            <span class="icon-github" aria-hidden="true"></span>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/technocrats-robotics-vit"
+            aria-label="LinkedIn"
+          >
+            <span class="icon-linkedin" aria-hidden="true"></span>
+          </a>
+          <a
+            href="https://www.facebook.com/technocratsrobotics/"
+            aria-label="Facebook"
+          >
+            <span class="icon-facebook" aria-hidden="true"></span>
+          </a>
+          <a
+            href="https://www.instagram.com/technocratsrobotics/"
+            aria-label="Instagram"
+          >
+            <span class="icon-instagram" aria-hidden="true"></span>
+          </a>
+        </nav>
+        <p class="m-footer-copyright">
+          <span>Athena &copy; 2021</span>
+          <span>&nbsp; &bull; &nbsp;</span>
+        </p>
+      </div>
+    </footer>
+    <script
+      crossorigin="anonymous"
+      src="../polyfill.io/v3/polyfill.mina50e.js?features=IntersectionObserver%2CPromise%2CArray.prototype.includes%2CString.prototype.endsWith%2CString.prototype.startsWith%2CObject.assign%2CNodeList.prototype.forEach"
+    ></script>
+    <script defer src="assets/js/manifestb222.js?v=214a6e5c0e"></script>
+    <script
+      defer
+      src="assets/js/vendor/content-api.minb222.js?v=214a6e5c0e"
+    ></script>
+    <script defer src="assets/js/vendorb222.js?v=214a6e5c0e"></script>
+    <script defer src="assets/js/appb222.js?v=214a6e5c0e"></script>
+    <script defer src="assets/js/homeb222.js?v=214a6e5c0e"></script>
+  
     
