@@ -11,6 +11,20 @@ function getCategory($con,$id){
     return $data['name'];
 
 }
+function SetBookmark($con,$id, $title, $post){
+
+     $qr = mysqli_query($con, "SELECT COUNT(*) AS count FROM bookmarks WHERE username='$id' and post_id='$post'");
+
+    $count = mysqli_fetch_assoc($qr);
+
+    if($count['count']<1){
+
+    $query1 = mysqli_query($con, "INSERT INTO bookmarks(username, title, post_id) VALUES ('$id', '$title', '$post')");
+    $data = mysqli_fetch_assoc($query1);
+    
+    }
+echo "<script>location.href='https://arms-cse3001.42web.io/post.php?post_link=".$post."';</script>";
+}
 function getTagStyle($id){
     if($id==1){
         return '<span style="padding: 3px 10px; font-size: 0.85rem; margin: 8px; font-weight: bolder; text-align: center; border-radius: 30px; vertical-align: middle; border: 2px solid #737679; background: #393c41; color: #ffffff;">Approved</span>';
@@ -67,7 +81,6 @@ function addVisit($con, $temp1, $temp2, $temp3){
     }
 }
 function getCategoryInfo($con,$id){
-
     $query="SELECT * FROM category WHERE id=$id";
 
     $run=mysqli_query($con,$query);
@@ -138,7 +151,7 @@ function newsletter($con){
 
     text: 'Your email address could not be added to our newsletter at this moment. Please try again after some time ! ' ,
 
-    footer: 'Please do send us a mail in case you are consistently not able to subscribe to our newsletter at technocratsrobotics@gmail.com',
+    footer: 'Please do send us a mail in case you are consistently not able to subscribe to our newsletter at athena.help@gmail.com',
 
     icon: 'error',
 
@@ -259,6 +272,7 @@ function getFinalPost($con){
     }
 
     return $data; 
+
 }
 
 function getRandomPost($con, $id){
