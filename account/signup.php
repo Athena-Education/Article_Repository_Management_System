@@ -119,7 +119,7 @@ Swal.fire('RECAPTCHA ERROR !!',
 	 });</script>";
 }
 else{
-		$secretKey = 'ADD_OWN'; 
+		$secretKey = '6LcQCtYcAAAAAPtWTFt_S1q_-icOALu-1Kn1kQQ0'; 
              
             // Verify the reCAPTCHA response 
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
