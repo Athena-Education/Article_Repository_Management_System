@@ -96,8 +96,8 @@ if(($_SESSION['connectiondb']=="false") ){
 
 else if (($_SESSION['connectiondb']=="true")){
     
-if ($_POST['uname']== $fetch_info['username'] && md5($_POST['pass'])==$fetch_info['codekey'] && $fetch_info['role_1']=="active"){
-    if($fetch_info['status']==1){
+if ($_POST['uname']== $fetch_info['username'] && md5($_POST['pass'])==$fetch_info['codekey'] && $fetch_info['status']==1){
+    if($fetch_info['role_1']=="active"){
     $_SESSION['uname']=$_POST['uname'];
     $_SESSION['last_login_timestamp'] = time(); 
     $_SESSION['status']="active";
@@ -111,6 +111,25 @@ if ($_POST['uname']== $fetch_info['username'] && md5($_POST['pass'])==$fetch_inf
 	 });
      </script>
      <?php
+    }
+    else if($fetch_info['role_1']=="inactive"){
+          $_SESSION['uname']=$_POST['uname'];
+    $_SESSION['last_login_timestamp'] = time(); 
+    $_SESSION['status']="active";
+    ?>
+    <script>Swal.fire({
+  title: 'Greetings <?php echo $fetch_info['name']; ?>' ,
+  text: 'Your account is temporarily banned because of suspicious activity. Please notify us at hariket.sukeshkumar2020@gmail.com if you want to re-activate your account' ,
+  icon: 'warning',
+  confirmButtonColor: '#d73',
+  confirmButtonText: 'RE-ACTIVATE'
+})
+      .then((value) => {
+     location.href='mailto:hariket.sukeshkumar2020@gmail.com'
+	 location.href='https://arms-cse3001.42web.io/account/login.php'
+	 });
+      </script>
+	 <?php
     }
 else {
 echo "<script>
@@ -129,7 +148,7 @@ Swal.fire('Account Not Verified !!',
 else if ($_POST['uname']== $fetch_info['username'] && md5($_POST['pass'])==$fetch_info['codekey'] && $fetch_info['role_1']=="inactive"){
     $_SESSION['uname']=$_POST['uname'];
     $_SESSION['last_login_timestamp'] = time(); 
-    $_SESSION['status']="inactive";
+    $_SESSION['status']="active";
     ?>
     <script>Swal.fire({
   title: 'Greetings <?php echo $fetch_info['name']; ?>' ,
