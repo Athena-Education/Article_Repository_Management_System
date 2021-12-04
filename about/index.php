@@ -212,7 +212,7 @@
       <div class="l-content">
          <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
           <div class="l-post-content">
-            <div class="pos-relative js-post-content">
+ <div class="pos-relative js-post-content">
               <p>Athena aspires to become a strong center for educational excellence capable of responding to emerging educational challenges and needs in a fast changing society. With its core values of fairness, honesty and integrity, Athena will always strive hard to build character, sharpen the intellect and encourage critical thinking among students through modern education retaining traditional values. <br><br>Consistent with its vision, Athena imparts quality education to students in a conducive, enabling, safe environment backed by robust infrastructure. A wide variety of innovative teaching practices are used to empower students with knowledge, methods, skills & techniques, so that they achieve their full potential & become academically sound, professionally competent & socially relevant.</p>
             </div>
           </div>
@@ -239,19 +239,19 @@
 
       </nav>
     <nav class="m-footer-social">
-        <a href="https://twitter.com/technocratsr" target="_blank" rel="noopener" aria-label="Twitter">
+        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
           <span class="icon-twitter" aria-hidden="true"></span>
         </a>
-        <a href="https://github.com/technocrats-robotics" aria-label="GitHub">
+        <a href="https://github.com/" aria-label="GitHub">
             <span class="icon-github" aria-hidden="true"></span>
         </a>
-      <a href="https://www.facebook.com/technocratsrobotics/" target="_blank" rel="noopener" aria-label="Facebook">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
         <span class="icon-facebook" aria-hidden="true"></span>
       </a>
-      <a href="https://www.instagram.com/technocratsrobotics/" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
         <span class="icon-instagram" aria-hidden="true"></span>
       </a>
-      <a href="https://www.linkedin.com/company/technocrats-robotics-vit" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <span class="icon-linkedin" aria-hidden="true"></span>
       </a>
     </nav>
