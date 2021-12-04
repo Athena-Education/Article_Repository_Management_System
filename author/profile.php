@@ -658,13 +658,13 @@
 
             <li class="nav-data-privacy">
 
-              <a href="privacy/index.php">Data &amp; privacy</a>
+              <a href="https://arms-cse3001.42web.io/privacy/index.php">Data &amp; privacy</a>
 
             </li>
 
             <li class="nav-contact">
 
-              <a href="contact/index.php">Contact</a>
+              <a href="https://arms-cse3001.42web.io/contact/index.php">Contact</a>
 
             </li>
 
@@ -682,7 +682,7 @@
 
           <a
 
-            href="https://twitter.com/technocratsr"
+            href="https://twitter.com"
 
             target="_blank"
 
@@ -696,7 +696,7 @@
 
           </a>
 
-          <a href="https://github.com/technocrats-robotics" aria-label="GitHub">
+          <a href="https://github.com" aria-label="GitHub">
 
             <span class="icon-github" aria-hidden="true"></span>
 
@@ -704,7 +704,7 @@
 
           <a
 
-            href="https://www.linkedin.com/company/technocrats-robotics-vit"
+            href="https://www.linkedin.com"
 
             aria-label="LinkedIn"
 
@@ -716,7 +716,7 @@
 
           <a
 
-            href="https://www.facebook.com/technocratsrobotics/"
+            href="https://www.facebook.com/"
 
             aria-label="Facebook"
 
@@ -728,7 +728,7 @@
 
           <a
 
-            href="https://www.instagram.com/technocratsrobotics/"
+            href="https://www.instagram.com/"
 
             aria-label="Instagram"
 
