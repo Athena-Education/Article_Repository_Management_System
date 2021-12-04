@@ -5,7 +5,8 @@
             include ('connection.php');
           include ('function.php'); 
      $url_visit = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-     addVisit($con, $_SERVER['SERVER_ADDR'], $_SERVER['HTTP_USER_AGENT'], $url_visit); 
+     $ip = getenv('HTTP_X_REAL_IP');
+     addVisit($con, $ip , $_SERVER['HTTP_USER_AGENT'], $url_visit); 
           $posts = getFinalPost($con);
           $count=1;
             
@@ -13,7 +14,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Blog | Athena</title>
+    <title>Athena</title>
     <meta name="HandheldFriendly" content="True" />
     <link rel="icon" type="image/jpg" href="https://arms-cse3001.42web.io/account/img/logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=0.7" />
@@ -21,6 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preload" href="assets/css/appb222.css?v=214a6e5c0e" as="style" />
+    <link rel="preload" href="assets/css/font-awesome.min.css" as="style" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
     <meta http-equiv="Pragma" content="no-cache"/>
     <meta http-equiv="Expires" content="0"/>
@@ -339,6 +341,7 @@
             $(document).ready(function () {
               var typed = new Typed(".typing", {
                 strings: [
+                    "General Knowledge",
                   "Web Development",
                   "App Development",
                   "AI",
@@ -350,6 +353,7 @@
                   "Crytpo",
                   "Deep Learning",
                   "Digital Forensics"
+                  
                 ],
                 typeSpeed: 110,
                 backSpeed: 60,
@@ -468,30 +472,30 @@
         </nav>
         <nav class="m-footer-social">
           <a
-            href="https://twitter.com/technocratsr"
+            href="https://twitter.com/"
             target="_blank"
             rel="noopener"
             aria-label="Twitter"
           >
             <span class="icon-twitter" aria-hidden="true"></span>
           </a>
-          <a href="https://github.com/technocrats-robotics" aria-label="GitHub">
+          <a href="https://github.com" aria-label="GitHub">
             <span class="icon-github" aria-hidden="true"></span>
           </a>
           <a
-            href="https://www.linkedin.com/company/technocrats-robotics-vit"
+            href="https://www.linkedin.com/"
             aria-label="LinkedIn"
           >
             <span class="icon-linkedin" aria-hidden="true"></span>
           </a>
           <a
-            href="https://www.facebook.com/technocratsrobotics/"
+            href="https://www.facebook.com"
             aria-label="Facebook"
           >
             <span class="icon-facebook" aria-hidden="true"></span>
           </a>
           <a
-            href="https://www.instagram.com/technocratsrobotics/"
+            href="https://www.instagram.com/"
             aria-label="Instagram"
           >
             <span class="icon-instagram" aria-hidden="true"></span>
