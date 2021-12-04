@@ -154,7 +154,6 @@ if($gender == "male"){
     $profilepic = "https://bit.ly/3xgJuiM";
 }
 else{
-    $profilepic = "https://bit.ly/3Cb76ZO";
 }
 $secure = md5($password);
 if($count==0 && $count1==0){
