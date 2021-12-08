@@ -119,7 +119,7 @@ Swal.fire('RECAPTCHA ERROR !!',
 	 });</script>";
 }
 else{
-		$secretKey = '6LcQCtYcAAAAAPtWTFt_S1q_-icOALu-1Kn1kQQ0'; 
+		$secretKey = 'ENTER-YOURS'; 
              
             // Verify the reCAPTCHA response 
             $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secretKey.'&response='.$_POST['g-recaptcha-response']); 
@@ -167,8 +167,8 @@ $query2 = mysqli_query($con, "insert into newsletter(email) values ('$email')");
         $mail->isSMTP();                                     
         $mail->Host = 'smtp.gmail.com';  
         $mail->SMTPAuth = true;                               
-        $mail->Username = 'athena.verify@gmail.com';                 
-        $mail->Password = 'aqpvbczxwulpdlqq';                        
+        $mail->Username = 'EMAIL';                 
+        $mail->Password = 'PASSWORD';                        
         $mail->SMTPSecure = 'ssl';                            
         $mail->Port = 465;                                    
         $mail->ClearReplyTos();
